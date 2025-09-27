@@ -364,4 +364,5 @@ void lv_port_init(void);
 
 # 其他注意事项
 1. 缓冲去大小一般是1/6到1/4屏幕大小，且分配的时候使用heap_caps_malloc函数，第二个参数使用MALLOC_CAP_DMA，确保DMA能直接访问。
-2. 如何要xia s
+2. 通常只会默认加载14号字体，如果要显示其他字体需要在Font usage中勾选对应的字号。
+3. 
