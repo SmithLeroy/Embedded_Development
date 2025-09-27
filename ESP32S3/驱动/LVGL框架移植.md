@@ -363,4 +363,5 @@ void lv_port_init(void);
 	3. Demos ==启用第一个demo==
 
 # 其他注意事项
-1. 缓冲去大小一般是1/6到1/4屏幕大小，且分配的时候使用heap_caps_malloc函数
+1. 缓冲去大小一般是1/6到1/4屏幕大小，且分配的时候使用heap_caps_malloc函数，第二个参数使用MALLOC_CAP_DMA，确保DMA能直接访问。
+2. 如何要xia s
