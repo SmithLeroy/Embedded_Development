@@ -1,3 +1,4 @@
+# 移植过程
 1. 新建components文件夹，并在最外层CMakeLists.txt文件添加如下代码
 ```
 set(EXTRA_COMPONENT_DIRS ./components)
@@ -359,9 +360,7 @@ void lv_port_init(void);
 5. idf.py menuconfig
 	1. Color setting  ==swap the 2 bytes of RGB 565 color==
 	2. Memory setting ==If true use custom malloc/free ==
-	3. Color setting  
-		1. swap the 2 bytes of RGB 565 color。
-	4. Memory setting
-		1. 
-	5. Demos
-		1. 启用第一个demo
+	3. Demos ==启用第一个demo==
+
+# 其他注意事项
+1. 缓冲去大小一般是1/6到1/4屏幕大小，且分配的时候使用heap_caps_malloc函数
