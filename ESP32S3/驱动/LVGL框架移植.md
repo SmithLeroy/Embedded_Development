@@ -2,11 +2,11 @@
 ```
 set(EXTRA_COMPONENT_DIRS ./components)
 ```
-1. components目录下下载lvgl源码
+2. components目录下下载lvgl源码
 ```bash 
 git clone --recursive https://github.com/lvgl/lvgl.git
 ```
-2. components目录下新建bsp文件，用于存放显示和触摸驱动
+3. components目录下新建bsp文件，用于存放显示和触摸驱动
 ```c fold title:st7789_driver.c
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -245,7 +245,7 @@ void st7789_lcd_backlight(bool enable);
 #endif
 
 ```
-3. main目录下创建 lv_port.c和lv_port.h，这个文件则是具体的移植文件
+4. main目录下创建 lv_port.c和lv_port.h，这个文件则是具体的移植文件
 ```c fold title:lv_port.c
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -356,3 +356,12 @@ void lv_port_init(void) {
 void lv_port_init(void);
 #endif
 ```
+5. idf.py menuconfig
+	1. Color setting  ==swap the 2 bytes of RGB 565 color==
+	2. Memory setting ==If true use custom malloc/free ==
+	3. Color setting  
+		1. swap the 2 bytes of RGB 565 color。
+	4. Memory setting
+		1. 
+	5. Demos
+		1. 启用第一个demo
