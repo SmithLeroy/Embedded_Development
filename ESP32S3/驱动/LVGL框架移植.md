@@ -245,3 +245,114 @@ void st7789_lcd_backlight(bool enable);
 #endif
 
 ```
+3. main目录下创建 lv_port.c和lv_port.h，这个文件则是具体的移植文件
+```c fold title:lv_port.c
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "lvgl.h"
+#include "esp_log.h"
+#include "st7789_driver.h"
+#include "esp_timer.h"
+
+#define TAG "lv_port"
+
+// 引脚定义
+#define PIN_LCD_SCLK    GPIO_NUM_5
+#define PIN_LCD_MOSI    GPIO_NUM_6
+#define PIN_LCD_CS      GPIO_NUM_16
+#define PIN_LCD_DC      GPIO_NUM_15
+#define PIN_LCD_RST     GPIO_NUM_7
+#define PIN_LCD_BL      GPIO_NUM_17
+
+// 屏幕参数
+#define LCD_PIXEL_CLOCK_HZ   (40 * 1000 * 1000) // 40MHz SPI时钟
+#define LCD_H_RES            240
+#define LCD_V_RES            320
+#define LCD_BITS_PER_PIXEL   16 // RGB565
+
+/*
+1.初始化和注册LVGL显示驱动
+2.初始化和注册LVGL触摸驱动
+3.初始化ST7789驱动
+4.初始化CST816T硬件接口
+5.提供一个定时器
+*/
+
+static lv_disp_drv_t disp_drv;
+
+void lv_flush_done_cb(void* param) {
+    lv_disp_flush_ready(&disp_drv);
+}
+
+void display_flush(struct _lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * color_p) {
+    st7789_flush(area->x1, area->x2 + 1, area->y1, area->y2 + 1, color_p);
+}
+
+void lv_disp_init(void) {
+    static lv_disp_draw_buf_t draw_buf;
+    const size_t disp_buf_size = LCD_H_RES * LCD_V_RES / 6; // 定义缓冲区大小 （1/4到1/6屏幕大小）
+    lv_color_t *disp1 = heap_caps_malloc(disp_buf_size * sizeof(lv_color_t), MALLOC_CAP_DMA);
+    lv_color_t *disp2 = heap_caps_malloc(disp_buf_size * sizeof(lv_color_t), MALLOC_CAP_DMA);
+    if (!disp1 || !disp2) {
+        ESP_LOGE(TAG, "Failed to allocate display buffers");
+        return;
+    }
+    lv_disp_draw_buf_init(&draw_buf, disp1, disp2, disp_buf_size);
+    lv_disp_drv_init(&disp_drv);
+    disp_drv.hor_res = LCD_H_RES;
+    disp_drv.ver_res = LCD_V_RES;
+    disp_drv.flush_cb = display_flush;
+    disp_drv.draw_buf = &draw_buf;
+    lv_disp_drv_register(&disp_drv);
+}
+
+void st778_hw_init(void) {
+    st7789_cfg_t lcd_config = {
+        .mosi = PIN_LCD_MOSI,
+        .clk = PIN_LCD_SCLK,
+        .cs = PIN_LCD_CS,
+        .dc = PIN_LCD_DC,
+        .rst = PIN_LCD_RST,
+        .bl = PIN_LCD_BL,
+        .spi_fre = LCD_PIXEL_CLOCK_HZ,
+        .width = LCD_V_RES,
+        .height = LCD_H_RES,
+        .spin = 0,
+        .done_cb = lv_flush_done_cb,
+        .cb_param = &disp_drv,
+    };
+    st7789_driver_hw_init(&lcd_config);
+}
+
+
+void lv_timer_cb(void* arg) {
+    uint32_t tic_interval = *((uint32_t*)arg); 
+    lv_tick_inc(tic_interval);
+}
+
+void lv_tick_init(void) {
+    static uint32_t tic_interval = 5;
+    const esp_timer_create_args_t periodic_timer_args = {
+        .callback = &lv_tick_inc,
+        .arg = &tic_interval,
+        .name = "lvgl_tick",
+        .dispatch_method = ESP_TIMER_TASK,
+        .skip_unhandled_events = true,
+    };
+    esp_timer_handle_t periodic_timer;
+    ESP_ERROR_CHECK(esp_timer_create(&periodic_timer_args, &periodic_timer));
+    ESP_ERROR_CHECK(esp_timer_start_periodic(periodic_timer, tic_interval * 1000)); // 1ms
+}
+void lv_port_init(void) {
+    lv_init();
+    st778_hw_init();
+    lv_disp_init();
+    lv_tick_init();
+}
+```
+```c fold title:lv_port.h
+# ifndef _LV_PORT_H
+#define _LV_PORT_H
+void lv_port_init(void);
+#endif
+```
