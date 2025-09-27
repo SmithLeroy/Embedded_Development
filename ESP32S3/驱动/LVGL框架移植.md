@@ -359,7 +359,7 @@ void lv_port_init(void);
 ```
 5. idf.py menuconfig
 	1. Color setting  ==swap the 2 bytes of RGB 565 color==
-	2. Memory setting ==If true use custom malloc/free ==
+	2. Memory setting ==If true use custom malloc/free==
 	3. Demos ==启用第一个demo==
 
 # 其他注意事项

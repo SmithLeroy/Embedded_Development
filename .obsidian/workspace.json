@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "ESP32S3/驱动/LVGL框架移植.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -94,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ESP32S3/驱动/LVGL框架移植.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "LVGL框架移植 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -113,12 +112,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ESP32S3/驱动/LVGL框架移植.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "LVGL框架移植 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -142,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ESP32S3/驱动/LVGL框架移植.md",
+                "file": "2025-09-27.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "LVGL框架移植 的大纲"
+              "title": "2025-09-27 的大纲"
             }
           },
           {
@@ -180,10 +178,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8fb73d8a08543f70",
+  "active": "8ed69b7aab0afe8e",
   "lastOpenFiles": [
-    "2025-09-27.md",
     "ESP32S3/驱动/LVGL框架移植.md",
+    "ESP32S3/通用设置项目.md",
+    "2025-09-27.md",
     "ESP32S3/驱动",
     "ESP32S3",
     "README.md"
