@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ESP32S3/驱动/DH11驱动.md",
+                "file": "ESP32S3/驱动/触摸传感器.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DH11驱动"
+              "title": "触摸传感器"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ESP32S3/驱动/DH11驱动.md",
+                "file": "ESP32S3/驱动/触摸传感器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "DH11驱动 的反向链接列表"
+              "title": "触摸传感器 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ESP32S3/驱动/DH11驱动.md",
+                "file": "ESP32S3/驱动/触摸传感器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "DH11驱动 的出链列表"
+              "title": "触摸传感器 的出链列表"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ESP32S3/驱动/DH11驱动.md",
+                "file": "ESP32S3/驱动/触摸传感器.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "DH11驱动 的大纲"
+              "title": "触摸传感器 的大纲"
             }
           },
           {
@@ -182,10 +182,11 @@
   },
   "active": "8fb73d8a08543f70",
   "lastOpenFiles": [
-    "ESP32S3/驱动/LVGL框架移植.md",
-    "ESP32S3/驱动/DH11驱动.md",
-    "2025-09-27.md",
     "ESP32S3/通用设置项目.md",
+    "ESP32S3/驱动/触摸传感器.md",
+    "ESP32S3/驱动/DHT11驱动.md",
+    "ESP32S3/驱动/LVGL框架移植.md",
+    "2025-09-27.md",
     "ESP32S3/驱动",
     "ESP32S3",
     "README.md"
