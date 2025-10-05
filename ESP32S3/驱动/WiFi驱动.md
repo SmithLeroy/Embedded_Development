@@ -98,4 +98,5 @@ void app_main(void)
 ```
 
 # Tips
-1. wifi工作前必须要初始化nvs
+1. wifi工作前必须要初始化nvs，需要在nvs中保存一些驱动相关的数据，所以必须开始的时候初始化。
+2. wifi功能的工作位置在核0或者核
