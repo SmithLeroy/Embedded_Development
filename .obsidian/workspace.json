@@ -11,10 +11,14 @@
             "id": "236e5221684bbb71",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ESP32S3/驱动/LVGL框架移植.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "LVGL框架移植"
             }
           }
         ]
@@ -178,6 +182,7 @@
   },
   "active": "236e5221684bbb71",
   "lastOpenFiles": [
+    "ESP32S3/驱动/DHT11驱动.md",
     "ESP32S3/引用官方组件步骤.md",
     "ESP32S3/驱动/LVGL框架移植.md",
     "ESP32S3/诡异问题.md",
@@ -190,7 +195,6 @@
     "ESP32S3/驱动/websocket.md",
     "ESP32S3/驱动/WiFi驱动.md",
     "ESP32S3/驱动/传感器列表.md",
-    "ESP32S3/驱动/DHT11驱动.md",
     "2025-09-27.md",
     "ESP32S3/驱动",
     "ESP32S3"
