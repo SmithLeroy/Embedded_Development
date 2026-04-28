@@ -157,8 +157,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -176,11 +176,13 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "236e5221684bbb71",
+  "active": "ad95276a3f57d5c9",
   "lastOpenFiles": [
+    "新建 文本文档.txt",
     "ESP32S3/驱动/LVGL框架移植.md",
     "ESP32S3/驱动/DHT11驱动.md",
     "ESP32S3/引用官方组件步骤.md",
