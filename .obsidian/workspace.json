@@ -11,14 +11,14 @@
             "id": "236e5221684bbb71",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "ESP32S3/通用设置项目.md",
-                "mode": "source",
-                "source": false
+                "aFile": "ESP32S3/诡异问题.md",
+                "bFile": "ESP32S3/诡异问题.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "通用设置项目"
+              "icon": "diff",
+              "title": "Diff: 诡异问题"
             }
           }
         ]
@@ -180,14 +180,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ad95276a3f57d5c9",
+  "active": "236e5221684bbb71",
   "lastOpenFiles": [
-    "新建 文本文档.txt",
-    "ESP32S3/驱动/LVGL框架移植.md",
-    "ESP32S3/驱动/DHT11驱动.md",
     "ESP32S3/引用官方组件步骤.md",
     "ESP32S3/诡异问题.md",
     "ESP32S3/通用设置项目.md",
+    "新建 文本文档.txt",
+    "ESP32S3/驱动/LVGL框架移植.md",
+    "ESP32S3/驱动/DHT11驱动.md",
     "README.md",
     "ESP32S3/基础代码.md",
     "ESP32S3/代码技巧.md",
