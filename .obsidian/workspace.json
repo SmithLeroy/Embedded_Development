@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1374b92d9b8932ae",
+        "id": "2dd0efd80411d813",
         "type": "tabs",
         "children": [
           {
-            "id": "236e5221684bbb71",
+            "id": "e1758b2480a4e225",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "ESP32S3/诡异问题.md",
-                "bFile": "ESP32S3/诡异问题.md",
-                "aRef": ""
+                "file": "ESP32S3/驱动/串口屏.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 诡异问题"
+              "icon": "lucide-file",
+              "title": "串口屏"
             }
           }
         ]
@@ -180,22 +180,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "236e5221684bbb71",
+  "active": "e1758b2480a4e225",
   "lastOpenFiles": [
+    "ESP32S3/驱动/DHT11驱动.md",
+    "ESP32S3/驱动/串口屏.md",
+    "ESP32S3/驱动/传感器列表.md",
+    "ESP32S3/驱动/触摸传感器.md",
+    "ESP32S3/基础代码.md",
+    "ESP32S3/通用设置项目.md",
     "ESP32S3/引用官方组件步骤.md",
     "ESP32S3/诡异问题.md",
-    "ESP32S3/通用设置项目.md",
     "新建 文本文档.txt",
     "ESP32S3/驱动/LVGL框架移植.md",
-    "ESP32S3/驱动/DHT11驱动.md",
     "README.md",
-    "ESP32S3/基础代码.md",
     "ESP32S3/代码技巧.md",
-    "ESP32S3/驱动/串口屏.md",
-    "ESP32S3/驱动/触摸传感器.md",
     "ESP32S3/驱动/websocket.md",
     "ESP32S3/驱动/WiFi驱动.md",
-    "ESP32S3/驱动/传感器列表.md",
     "2025-09-27.md",
     "ESP32S3/驱动",
     "ESP32S3"
