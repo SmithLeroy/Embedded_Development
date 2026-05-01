@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ESP32S3/驱动/串口屏.md",
+                "file": "ESP32S3/引用官方组件步骤.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "串口屏"
+              "title": "引用官方组件步骤"
             }
           }
         ]
@@ -182,8 +182,8 @@
   },
   "active": "e1758b2480a4e225",
   "lastOpenFiles": [
-    "ESP32S3/驱动/DHT11驱动.md",
     "ESP32S3/驱动/串口屏.md",
+    "ESP32S3/驱动/DHT11驱动.md",
     "ESP32S3/驱动/传感器列表.md",
     "ESP32S3/驱动/触摸传感器.md",
     "ESP32S3/基础代码.md",
