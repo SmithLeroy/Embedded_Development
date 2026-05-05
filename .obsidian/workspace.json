@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ESP32S3/诡异问题.md",
+                "file": "ESP32S3/通用设置项目.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "诡异问题"
+              "title": "通用设置项目"
             }
           }
         ]
@@ -182,11 +182,12 @@
   },
   "active": "e1758b2480a4e225",
   "lastOpenFiles": [
+    "ESP32S3/引用官方组件步骤.md",
+    "ESP32S3/诡异问题.md",
     "硬件/三极管.md",
     "README.md",
     "硬件",
     "ESP32S3/基础代码.md",
-    "ESP32S3/诡异问题.md",
     "ESP32S3/代码技巧.md",
     "ESP32S3/驱动/WiFi驱动.md",
     "ESP32S3/驱动/websocket.md",
@@ -195,7 +196,6 @@
     "ESP32S3/驱动/串口屏.md",
     "ESP32S3/驱动/传感器列表.md",
     "ESP32S3/驱动/触摸传感器.md",
-    "ESP32S3/引用官方组件步骤.md",
     "ESP32S3/通用设置项目.md",
     "新建 文本文档.txt",
     "2025-09-27.md",
